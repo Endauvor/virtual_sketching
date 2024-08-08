@@ -283,7 +283,9 @@ def draw_strokes(data, save_root, save_filename, input_img, image_size, init_cur
 
     os.makedirs(save_root, exist_ok=True)
     save_path = os.path.join(save_root, save_filename)
+    print('save_path', save_path)
     canvas_img = Image.fromarray(canvas, 'L')
+    print('saving to save_path')
     canvas_img.save(save_path, 'PNG')
 
     if save_seq:
@@ -355,6 +357,8 @@ def draw_strokes(data, save_root, save_filename, input_img, image_size, init_cur
         plt.imshow(color_array)
 
         comp_save_path = os.path.join(order_comp_save_root, save_filename)
+        print('save path in draw order:', comp_save_path)
+        
         plt.savefig(comp_save_path)
         plt.close()
         # plt.show()
