@@ -358,6 +358,7 @@ def draw_strokes(data, save_root, save_filename, input_img, image_size, init_cur
 
         comp_save_path = os.path.join(order_comp_save_root, save_filename)
         print('save path in draw order:', comp_save_path)
+        print('yes')
         
         plt.savefig(comp_save_path)
         plt.close()
